@@ -2,15 +2,14 @@ import requests
 import re
 from bs4 import BeautifulSoup
 from urllib.request import urlopen
-from urllib.parse import urlsplit
-from urllib.parse import urlparse
 import re
 from Utils import *
+from dotenv import load_dotenv
+import os
 
-API_KEY = 'e3a053cd179f43b4add5dd0246dd7922'
-API_KEY_1 = 'at_mFL8Qi9LIHjC6saXgawUmjeDyZ5bf'
-API_KEY_1 = 'this is not free'
-API_KEY='not free either'
+load_dotenv()
+API_KEY = os.getenv('API_KEY')
+API_KEY_1 = os.getenv('API_KEY_1')
 
 
 def get_geoinfo(ip):
